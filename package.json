@@ -179,6 +179,7 @@
     "tar": "^6.2.0",
     "toidentifier": "^1.0.1",
     "tr46": "^3.0.0",
+    "tsc": "^2.0.4",
     "type-is": "^1.6.18",
     "typedarray": "^0.0.6",
     "undici-types": "^5.25.3",

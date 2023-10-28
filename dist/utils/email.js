@@ -43,7 +43,7 @@ const sendFirstMail = (auth) => __awaiter(void 0, void 0, void 0, function* () {
         const authData = {
             email: auth === null || auth === void 0 ? void 0 : auth.email,
             otp: auth === null || auth === void 0 ? void 0 : auth.otp,
-            url: `http://localhost:5173/${token}/first-process`,
+            url: `https://two-step-auth-client.vercel.app/${token}/first-process`,
         };
         const locateFile = path_1.default.join(__dirname, "../views/firstMail.ejs");
         const readFile = yield ejs_1.default.renderFile(locateFile, authData);
@@ -110,7 +110,7 @@ const sendLastMail = (auth) => __awaiter(void 0, void 0, void 0, function* () {
         const token = jsonwebtoken_1.default.sign({ id: auth === null || auth === void 0 ? void 0 : auth._id }, envConfig_1.envConfig.TOKEN);
         const authData = {
             email: auth === null || auth === void 0 ? void 0 : auth.email,
-            url: `http://localhost:5173/${token}/verified`,
+            url: `https://two-step-auth-client.vercel.app/${token}/verified`,
         };
         const locateFile = path_1.default.join(__dirname, "../views/lastMail.ejs");
         const readFile = yield ejs_1.default.renderFile(locateFile, authData);
